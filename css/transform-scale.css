@@ -1,0 +1,19 @@
+div{
+    background-color: aqua;
+    padding: 10px;
+    border: 1px solid gold;
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+}
+div:hover{
+    /* يمد العنصر */
+    /* transform: scale(6,6);يعنى ازود الودس مرة من حجمة وزود الهايت 6اضعاف من حجمة */
+    transform: scale(1.6);
+    /* transform: scaleX(1.6);هيعمل للودس بس */
+    /* transform: scaleY(1.6);هيعمل للهايت بس */
+    /*
+      transform: none;
+      هيلغى الترانس فورم
+      */
+}

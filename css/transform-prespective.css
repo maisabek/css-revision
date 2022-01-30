@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    perspective: 300px; /* المسافة بين العنصر وبين عنيى*/
+    /*  perspective-origin: x y; */
+        /* بيووضح البوزشن اللى انا ببص منة يعنى انا ببص من النص */
+    /* perspective-origin: 50% 50%; */
+    /*perspective-origin: left; يعنى كانى بقلة صفر*/
+    /* perspective-origin: center;يعنى فى نص */
+    /* perspective-origin: right;هترووح فى الشمال */
+    /* perspective-origin: bottom;الصورة هتطلع لفووق */
+} 
+div{
+    background-color: aqua;
+    padding: 10px;
+    border: 1px solid gold;
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    overflow: visible;
+    transition: all .5s ease;
+    /* transform: translateZ(99px); */
+    transform: rotateX(180deg);
+}

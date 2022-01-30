@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+div{
+    background-color: aqua;
+    padding: 10px;
+    border: 1px solid gold;
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    overflow: visible;
+    transition: all .5s ease;
+}
+div:hover{
+    /* 
+    transform: translate(x,y);
+    x ==> يمين او شمال لو بالموجب  يتحرك يمين لو بالسالب هيتحرك شمال
+    y ==>   فوق او تحت
+    لو بالموجب  يتحرك تحت لو بالسالب هيتحرك فوق
+    لازم اكتب القمتين
+    */
+    /* transform: translate(20px,0px);   حرك عشرين بكسل فى اتجاة الاكس */
+    /* transform: translate(-20px,40px);هيتحرك فى الاتجاة العكس */
+    /* transform: translate(-20px); دى فى اتجاة الاكس بس مش الاتنين */
+    /* transform: translateX(-20px);فى اتجاة الاكس بس يعنى يمين وشمال */
+    /* transform: translateY(-20px);فى اتجاة ال واى ب يعنى فووق وتحت */
+    -webkit-transform: translateX(-160px) scale(0.75) rotate(90deg);/* هينفذ ال 3 خصائص*/
+    transform: translateX(-160px) scale(0.75) rotate(90deg);
+}

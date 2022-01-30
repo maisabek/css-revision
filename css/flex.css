@@ -1,0 +1,148 @@
+.container{
+    width: 1000px;
+    height: 500px;
+    background-color: gainsboro;
+    display: flex;
+      /*
+    display:inline-flex;
+    لو انا عايزة اضيف حاجة جنب الديف اللى اسمة 
+    container
+    والحاجة اللى هضيفها اديها
+    display:inline-block
+    */
+    flex-direction: row;
+       /* 
+    اتجاة العناصر اللى جوة الديف دة هتكون ازاى ؟ الطبيعى بيكون رو وفى حاجة اسمها
+    row-reverse ==> ودا عكس رو 
+    وفى 
+    colume بيعرض من فوق لتحت  
+    عكسة 
+    الcolume-reverse 
+     ________________
+
+     flex-wrap: nowrap; 
+     يعنى لو العناصر كبرت تنزل تحت 
+     nowrap  متنزلش تحت
+     wrap تنزل تحت
+     wrap-reverse لما ينزل تحت ينزل عكس ترتيب الديفات
+
+     __________________
+
+    flex-flow: flex-dicrtion, flex-wrap;
+
+     */
+
+     flex-flow:row nowrap;
+     justify-content: space-between;
+     /*
+     justify-content المحاذة 
+     flex-start البداية
+     flex-end محاذاة فى نهاية السطر
+     center وسط العناصر فى النص
+     space-between بيحط مساحة متساوية بين العناصر
+     space-around بيحط مساحة حولين العنصر
+   */
+   align-items: stretch;
+   /*
+     align-items:  flex-start;
+     يعنى بيجيب الديف على اد ال 
+     line
+   بيتعامل مع الديف على اساس محتواة يعنى بيعتمد على السطر
+يعنى كل ديف بياخد مساحة الحاجات اللى جواة مش بيذيد
+  align-items: flex-end;
+  بيتعامل بالعرض
+  هيجبهم فى نهاية الديف
+و كل ديف بياخد مساحة الحاجات اللى جواة مش بيذيد
+align-items:center
+ هيجبهم فى نص الديف
+ baseline العادى
+   */
+   align-content:stretch;
+   /*
+    بيشتغل اما ميكونش فى مساحة فاضية يشتغل فيها
+  يعنى يكون فى wrap
+    بتعمل تنسيق لل عناصر اللى جو الفلكس بوكس بشكل طولى
+   stretch الديفلت فاليو يعنى الوضع العادى
+   center هيجبهم فى النص بس بشكل طولى
+    flex-start بدء الديفات ور بعضها من الاول
+    flex-end حط العناصر فى الاخر خالص
+   */
+    padding: 10px;
+}
+
+.container div{
+    padding: 20px;
+    /* flex:1;  */
+    /*   هتخلى الديفات اد بعضها*/
+    background-color: goldenrod;
+    width: 100px;
+    height: 10px;
+}
+/* */
+.container .one{
+  order: 3;
+  /*
+  order عشان ارتب الديفات عندى 
+  _____________________
+  flex-grow: 2;
+  نمو الديف الديفلت بتاعها زيرو 
+  يقدر ياخد اد مساحة الديفات اللى جنبة ممكن مرة او مرتين عادى اى رقم
+  بياحد مساحة الديف اللى باقية
+  */
+  }
+  .container .two{
+    order: 4;
+    flex-grow: 2;
+    flex-shrink: 1;
+     /* 
+    flex-shrink  
+    يصغر الديف
+    الحجم  بتاعة بيفضل ثابت مش بيغيرة لوغيرت فى حجم الكونتينر
+     لما بياخد صفر 
+       الديف يتقلص والديفلت بيكون واحد
+   يعنى ميعملش اشرنك متخلهوش يتقلص
+    */
+  }
+  .container .three{
+    order: 1;
+    flex-shrink:3;
+  }
+  .container .four{
+    order: 2;
+    flex-basis: 200px; /*  الودس حجمة 200 بكسل */
+  }
+.container div:first-of-type{
+    background-color: rgb(230, 127, 149);
+    flex-basis: auto; /* هياخد الودس اللى كان فى الطبيعى هياخدها */
+}
+
+.container div:nth-of-type(2){
+    background-color: rgb(95, 120, 182);
+}
+.container div:nth-of-type(3){
+    background-color: rgb(172, 84, 153);
+}
+
+.container div:last-of-type{
+    background-color: rgb(32, 218, 131);
+    transition: all 1s ea;
+}
+
+/*
+flex Shorthand
+
+flex:0 1 auto;
+0 ==> flex-grow
+1 ==> flex-Shrink
+auto ==> flex-Basis
+*/
+
+
+/*
+Transition
+الانسايبة 
+اى ايفكت او هافر انا بعملة بيحصل علطول انا مبلحقش اشوفة اما ال 
+Transitionدة
+اقدر اتحكم بحيث انها تمشى براحة او بسرعة
+
+*/

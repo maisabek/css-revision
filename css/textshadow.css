@@ -1,0 +1,20 @@
+/* prefix free حاجة بستخدمة بتحط البرفكس للى محتاج*/
+h2{
+    text-align: center;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    /*
+    text-shadow:horizontalShadow VerticalShadow blur-raduis color;
+    blur-raduisنسبة الانتشار
+    text-shadow:none الديفلت
+    */
+    text-shadow: 1px 2px 3px rgb(207, 207, 207),
+    1px 2px 3px green,
+    1px 2px 3px blue;
+}
+h1{
+    text-align: center;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: none;
+}

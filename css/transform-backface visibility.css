@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    perspective: 300px; /* المسافة بين العنصر وبين عنيى*/
+}
+.card{
+    width:300px; 
+    height: 300px;
+    margin: 100px auto;
+    position: relative;
+    transition: all .5s ease-in-out;
+    transform-style: preserve-3d;
+}

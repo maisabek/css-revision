@@ -1,0 +1,268 @@
+.parent{
+    background:#00f;
+    color:#FFF;
+    padding: 10px;
+}
+/* 
+
+> direct child 
+يعنى الشيلد بتوعة مباشرة 
+*/
+
+.parent > div{ 
+/* يعنى الدفات اللى جوة الديف اللى اسمة بايرنت وتكون الديفات دى مش جوة ديف تانى*/
+    background:#F00;
+    color:#FFF;
+    margin:10px;
+    padding: 10px;
+}
+
+.parent > p{
+    background:#080;
+    color:#FFF;
+    margin:10px;
+    padding: 10px;
+}
+.parent aside{
+    background:#000;
+    color:#FFF;
+    margin:10px;
+    padding: 10px; 
+}
+/*
+
+* 
+معناها جميع عناصر الصفحة
+ 
+*/
+
+/* 
++ 
+معناها next 
+العنصر اللى بعدة
+*/
+p + div { /*  لو العنصر اللى بعدة ديف 
+              لازم برجراف بعدة ديف
+          */
+color:yellow;
+}
+/*
+~
+ عايز الاشقاء بتوعة يعنى يكونوا فى نفس الديف مع بعض
+ ويكونوا بعدة
+*/
+p ~ div{ 
+/*  
+عايز برجراف وديف يكون مع بعض فى نفس الديف يعنى الاتنين ليهم نفس البيرنت
+ويكون بعدة
+*/
+color:turquoise;
+}
+p:first-letter{
+    font-size: 40px;
+}
+p:first-line{
+color:indigo;
+}
+div p:first-child{ /* اول برجراف جوة الديف*/
+    background-color:chocolate ;
+}
+div p:first-child span:first-child{ /* اول برجراف واول اسبان من البرجراف دة*/
+    background-color: lightcoral ;
+}
+
+/*
+a:active{}
+يعنى لما اضغط على ال 
+a
+ومش شايلة ايدى
+
+_________
+
+^
+عشان ابحث عن قيمة اتربيوت معين
+
+*/
+[class^="parent"]{ /*  
+اى كلاس بيبدء ب parent*/
+background-color:mediumslateblue;
+}
+[class^="pa"]{ /*  اى كلاس بيدء بحرف الpa*/
+border:6px solid rgb(136, 52, 52);
+}
+
+/* 
+$ 
+اى كلاس بينتهى بالحرف اللى مديهولوة
+
+*/
+[class$="d"]{ /*  اى كلاس بينتهى بحرف ال d*/
+    border:1px solid greenyellow;
+
+}
+
+
+[class*="h"]{ /* */
+color:rgb(130, 0, 87);
+}
+:checked{ /*  فى الرديو باتون والشيك بوكس اللى اضغط علية او اختارة ياخد الخصائص دى*/
+    width: 100px;
+}
+.form:checked{ /*  فى الرديو باتون والشيك بوكس اللى اضغط علية او اختارة ياخد الخصائص دى*/
+    width: 100px;
+}
+:disabled{ /*  اى حاجة واخدة ديس ايبلد نفذ الخصائص دى عليها*/
+    background-color: indigo;
+}
+:enabled{
+    background-color: rgb(130, 0, 91);
+
+}
+:empty{ /* اى عنصر فاضى */
+    background-color: rgb(94, 79, 161);
+}
+
+section:not(p){ /*  اى حاجة جوة السكشن مش برجراف*/
+color: lawngreen;
+}
+
+section :first-child{
+    color:lightsalmon;
+}
+
+section :not(:first-child){
+    color:rgb(128, 106, 97);
+}
+
+section:last-child{ /* اخر طفل عندى*/
+    color: magenta;
+}
+
+section div:first-of-type{ 
+    /*   
+    اول العنصر من نوعة
+   هنا اول ديف جوة البرينت اللى هو سكشن يطبق علية
+    */
+    color: rgb(146, 124, 146);
+}
+p:only-child{ /*  يعنى اى برجراف تلاقية هو الطفل الوحيد*/
+color: maroon;
+}
+p:only-of-type{ /* الطفل الوحيد من نوعة*/
+color:mediumblue;
+}
+
+::selection{ /*  لما اجى احدد حاجة جوة البروزر نص مثلا*/
+    background-color: tomato;
+    color:white;
+}
+/* 
+Nth: number th 
+Nth(number , formula, keyword)
+*/
+
+div:nth-child(2){ /*  الديف رقم 2 */
+    color:violet;
+    font-weight: bold
+}
+
+div:nth-last-child(2){ /*  الديف رقم 2 بيبدء عد من تحت */
+    color:violet;
+    font-weight: bold;
+}
+
+div:nth-child(10){ /*  الديف رقم 10 مش هينفذ علية لان فى برجراف فصل ما بنهم عشان كدة استخدم
+                       div:nth-of-type(10)  */
+    color:violet;
+    font-weight: bold;
+}
+
+div:nth-of-type(10){ /*      الديف رقم 10 من نوعة*/
+color: turquoise;
+}
+div:nth-last-of-type(10){ /*     
+    الديف رقم 10 من نوعة
+    بيعد من الاخر
+    */
+    color: turquoise;
+    }
+
+
+div:nth-child(odd){ /*   اول اندكس ويفوت وياخد اللى بعدة */
+    color:violet;
+    font-weight: bold;
+}
+
+div:nth-last-child(odd){ /* بيبدء من تحت 
+     اول اندكس ويفوت وياخد اللى بعدة */
+    color:violet;
+    font-weight: bold;
+}
+
+div:nth-last-of-type(even){ /*  عكس ال odd */
+    color:violet;
+    font-weight: bold;
+}
+
+div:nth-of-type(odd){ /*    اول اندكس ويفوت اللى بعدةولو لاقى فى نص برجراف كانة مش شايفةوبيفوتة وبيفوت الديف اللى بعدة */
+    color:violet;
+    font-weight: bold;
+}
+
+div:nth-child(n+5){ /* هياخد من اول الديف رقم 5 لحد تحت */
+    color:violet;
+    font-weight: bold;
+}
+
+div:nth-last-child(n+5){ /* هياخد من اول الديف رقم 5 من تحت لحد فوق */
+    color:violet;
+    font-weight: bold;
+}
+/*
+المعادلات تنطبق على 
+:nth-of-type()
+بردة
+*/
+div:nth-child(-n+5){ /* سالب يعنى يبدء من اول ديف عندى فى الصفحة لحد الديف رقم 5 */
+    color:violet;
+    font-weight: bold;
+}
+/*
+2n+1 
+دى نفس ال
+odd
+بالظبط
+هى بتحسبب كدة نفرض ال 
+n
+من صفر لحد الاخر هيدنى الاعداد الفردى
+___________________________________
+3n+1
+بيحدد ديف ويسيب 2 وهكذا
+_______________________
+4n+1
+بيحدد ديف ويسيب 3 وهكذا
+_________________________
+div:nth-child(n+2):nth-child(-n+5){}
+هيحدد من الديف رقم 2 لحد الديف رقم 5
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

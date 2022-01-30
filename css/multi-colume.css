@@ -1,0 +1,54 @@
+div{
+    /* هيقسم الديف دة على 3 اعمدة والديقلت 
+     auto يعنى هيسيبة واحد زى ما هو */
+  -webkit-column-count:3;
+  column-count: 3;
+/* الفرق بين الاعمدة والديفلت بتعهاnormal */
+  -webkit-column-gap: 100px;
+  column-gap: 100px;
+
+  /*  البوردر اللى ما بين الاعمدة
+         column-rule: width style color
+  */
+  -webkit-column-rule:4px solid green ;
+  column-rule:4px solid green ;
+  /* او */
+  -webkit-column-rule-width:4px;
+  column-rule-width: 4px;
+
+  -webkit-column-rule-style:4px;
+  column-rule-style: 4px;
+
+  -webkit-column-rule-color:red;
+  column-rule-color: red;
+
+  /* بيقسم على اساس مساحة الشاشة هيبقى عندى كام كولم */
+  /* -webkit-column-width:500px;
+  column-width: 500px; */
+
+  /* columns: width count  */
+  -webkit-columns: 200px 4;
+  columns: 200px 4;
+}
+div h2{
+    /* يعنى يحط h2
+       فى انهى كولم والديفلت بتاعها واحد
+       
+    */
+    -webkit-column-span: 1;
+      column-span: 1;
+   /* بعدى كل الكولم يعنى متحطهاش فى ولا كولم  */
+      -webkit-column-span: all;
+      column-span: all;
+}
+
+
+
+
+
+
+
+
+
+
+

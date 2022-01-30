@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    perspective: 600px;
+}
+div{
+    background-color: aqua;
+    padding: 10px;
+    border: 1px solid gold;
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    overflow: visible;
+    transition: all .5s ease;
+}
+div:hover{
+    /*    عشااان اشغل عنصر بال 3 دى لازم اعملة برسبكتف*/
+    /* -webkit-transform: translate(360deg); */
+    /* transform: translate3d(0,0,-100px); */
+    /* transform: translateZ(-100px);دى نفس اللى فوقها */
+    transform: translate3d(100px,100px,-100px);
+}

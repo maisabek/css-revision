@@ -1,0 +1,22 @@
+div{
+    background-color: burlywood;
+    padding: 10px;
+    border: 1px solid red;
+    width: 300px;
+    white-space: normal;
+    /*مبتخليش الكلام ينزل لتحت*/
+   /* white-space: normal; هينزل سطر فى حالة ان فى مساافة بين الكلام */
+    overflow: hidden; /*  لازم اكتبها عشان تبان خاصية التكست اوفرفلو */
+    /*
+    text-overflow: clip;
+    التكملة الافترضية 
+    */
+    /*
+    text-overflow: ellipsis;
+    بتحط نقط يعنى فى كلام هنا
+    */
+    text-overflow: clip;
+}
+div:hover{
+    overflow: visible;
+}

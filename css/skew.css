@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+div{
+    background-color: aqua;
+    padding: 10px;
+    border: 1px solid gold;
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    overflow: visible;
+    transition: all .5s ease;
+}
+div:hover{
+    /* transform: skew(20deg,30deg);   الميل والانحراف */
+    /* transform: skew(20deg); هيطبق الميل بزاوية 20 فى اتجاة الاكس */
+    /* transform: skewX(20deg); */
+    transform: skewX(20deg) scale(1.2) translateY(50px);
+}

@@ -1,0 +1,16 @@
+div {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: green;
+    border:1px solid red;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    resize: both; /* يعنى اقدر لما اقف على الديف بالموس اقدر اكبر واصغر */
+    resize:vertical; /* اقدر اسحبة بالموس عمودى*/
+    resize:horizontal; /*    اقدر اسحبة بالموس افقى*/
+
+}
+textarea{
+    resize: none;
+}

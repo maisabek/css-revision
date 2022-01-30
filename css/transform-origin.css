@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    perspective: 300px;
+     /* المسافة بين العنصر وبين عنيى */
+}
+div{
+    background-color: aqua;
+    padding: 10px;
+    border: 1px solid gold;
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    overflow: visible;
+    transition: all .5s ease-in-out;
+}
+div:hover{
+    transform: rotateZ(360deg);
+    transform-origin: left;/*بيغير مكاانة بجاانب الروتات بيغير من عند اليفت*/
+    transform-style: preserve-3d;/*حافظ على حالة ال سرى دى*/
+    transform-style: flat;/*مش بيحافظ على السرى دى*/
+} 

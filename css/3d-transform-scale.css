@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    perspective: 300px; /* المسافة بين العنصر وبين عنيى*/
+}
+
+div{
+    background-color: aqua;
+    padding: 10px;
+    border: 1px solid gold;
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    overflow: visible;
+    transition: all .5s ease;
+}
+
+div:hover{
+    transform: scaleZ(4) rotateX(60deg);
+    /* transform: scale3d(0,0,100) rotateY(80deg);الاحسن ان اعمل معاة خاصية تاانية */
+}

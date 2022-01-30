@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+div{
+    background-color: aqua;
+    padding: 10px;
+    border: 1px solid gold;
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    overflow: visible;
+    transition: all .5s ease;
+}
+div:hover{
+    /* -webkit-transform: rotateX(360deg); */
+    /* transform: rotateX(360deg); */
+    /* transform: rotateY(360deg); */
+    transform: rotateZ(360deg);
+}

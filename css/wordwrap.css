@@ -1,0 +1,381 @@
+
+/* 
+CSS stands for Cascading Style Sheets
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+CSS saves a lot of work. It can control the layout of multiple web pages all at once
+______
+CSS is used to define styles for your web pages, including the design, 
+layout and variations in display for different devices and screen sizes.
+___________
+The background-attachment property specifies whether the background 
+image should scroll or be fixed (will not scroll with the rest of the page):
+
+______
+box model 
+كل شىء بنعملة فى التصميم يعتبر بوكس
+اى حاجة بكريتها دة يعتبر بوكس مودل زى الديف
+مثلا
+او اى شىء بياخد خواص البلوك
+It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:
+_________
+ top right bottom left
+ margin 
+ used to create space around elements, outside of any defined borders.
+الهوامش الخارجية للعنصر 
+margin:auto; هى نفسها margin:0 auto;
+بيوسط العنصر
+Margin Collapse
+margin : top right bottom left;
+_______
+padding
+ properties are used to generate space around an element's content , inside of any defined borders.,
+الهوامش الدخلية للعنصر
+______
+height and width properties may have the following values:
+auto - This is default. The browser calculates the height and width
+initial - Sets the height/width to its default value
+inherit - The height/width will be inherited from its parent value
+length - Defines the height/width in px, cm etc.
+----- 
+min-width 
+يعنى العرض يبدء من القيمة دى
+اقل عرض للعنصر دة يكون كذا
+فى حالة انى محددتلوش وادس او محددتلوش ماكس وادس
+وعايزة اوقفة احددلة الماكس ودس اقولة الماكس ودس كذا
+________
+inline
+ بيتعرضوا عرض خطى جنب بعض زى اللينكات وزى الصور
+ لو عايزة انزلهم تحت بعض ب 
+ display:block;
+ ____________________________________________
+block 
+ بيتحط لوحدة فى المكان مبيجيش جنبة حاجة زى البرجراف والهيدنج
+ لو عايزة اخليهم جنب بعض 
+ display:inline;
+ ______________________________________________
+ display:inline-block;
+ هيجوا جنب بعض وهياخدوا خواص البلوك
+___________________
+
+static 
+العنصر فى العادى بياخد استاتك
+fixed
+هيثبت معايا مهما عملت اسكرول فى الصفحة
+relative
+بوزشن نسيبى لنفسة
+المكان بتاعة الفاضى بيفضل فى الورق فلو مبيتشلش
+بيكون اب للبوزشن ال 
+absolute
+______________
+absolute
+بيفضل يدور فى الأب على حاجة واخدة 
+relative
+ولو ملقاش يفضل يدور فى الأب اللى بعدة وهكذا
+عشان ياخد البوزشن اللى مديهولوة وان ملاقش خالص يروح للروت اللى هو الاتش تى ام ال
+
+ لو مش محددة ودس هياخد ال 
+ full width
+ وزيها فى الهايت لو مش محددة هايت هيفضل يتمدد معايا
+ _______________
+overflow المحتوى اللى بيخرج برة
+_____________________________
+overflow:visible هيفضل ظاهر
+______________________________
+overflow:hidden هيخفى الذيادة
+لو عندى ديف جواة مثلا برجرفات وعايزة اعملهم 
+float:left
+الديف اللى شيلهم بيقى ال
+height
+بتاعة زيرو بكسل 
+فعشان احلها اكتب فى الديف دة
+overflow:hidden
+_________________________________
+overflow:scroll  
+ لما يبقى في ذيادة هيعمل اسكرول 
+ الاسكرول هيفضل موجود سوء فى ذيادة او لا 
+ لو مفيش ذيادة بيقى موجود بس مش بقدر اتحكم فية
+ _____________________________________________
+overflow:auto لما يبقى فى ذيادة هيعمل اسكرول
+الاسكرول هيظهر لما يبقى فى ذيادة
+__________
+z-index:auto
+يعنى هيحط الديفات بترتبهم فوق بعض
+________
+content 
+عشان اضيف تكست من ال 
+css
+وبتستخدم مع ال
+before , after
+div:after{
+content:"mm" هيضيف التكست دة بعد الديف
+ اى خصائص هكتبها هنا
+هتنطبق على اللى بعد الديف يعنى اللى موجود جوة ال
+content
+}
+كرزر
+cursor:pointer
+cursor:cell دى علامة الذائد
+cursor:help            دى علامة استفهام
+cursor:progress كأن بيعمل لوود
+cursor:crosshair علامة زائد
+cursor:e-resize ==> East سهم فى اتجاة ال 
+cursor:n-resize ==> north سهم فى اتجاة ال
+cursor:nw-resize ==> north west سهم فى اتجاة ال
+cursor:s-resize ==> south  سهم فى اتجاة ال
+cursor:se-resize ==> south east  سهم فى اتجاة ال
+cursor:sw-resize ==> south west سهم فى اتجاة ال
+cursor:w-resize ==>  west سهم فى اتجاة ال
+cursor:text خط
+cursor:move سهم للاربع نواحى
+cursor:wait لوود
+_________________________________
+outline
+نفس ال
+border
+ولكن مش بياخد من مساحة الديف
+outline: 5px solid yellow; 
+is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".
+_____
+outline-offset property adds space between an outline and the edge/border of an element.
+ The space between an element and its outline is transparent.
+   outline-offset: 15px;
+_____________________________
+border-collapse: collapse;
+property sets whether the table borders should be collapsed into a single border
+----------
+border-spacing: 15px
+property sets the distance between the borders of adjacent cells.
+-----------
+caption-side property specifies the placement of a table caption
+#example2 {
+  caption-side: 
+  top; ==> Puts the caption above the table. This is default
+  bottom; ==> Puts the caption below the table
+  initial ==> Sets this property to its default value
+  inherit ==> Inherits this property from its parent element.
+
+}
+<table id="example1" border="1">
+<caption>Table 1.1 Customers</caption>
+</table>
+_________
+empty-cells ==> property sets whether or not to display borders on empty cells in a table.
+table {
+  empty-cells: hide;
+}
+show ==> Display borders on empty cells. This is default
+hide ==> Hide borders on empty cells
+initial ==> Sets this property to its default value
+inherit ==> Inherits this property from its parent element.
+----------
+table-layout ==> property defines the algorithm used to lay out table cells, rows, and columns
+table-layout: auto|fixed|initial|inherit;
+auto ==> The column width is set by the widest unbreakable content in the cells. The content will dictate the layout
+fixed ==> Sets a fixed table layout algorithm. The table and column widths are set by the widths of table and col or by the width of the first row of cells
+initial ==> Sets this property to its default value
+inherit ==> Inherits this property from its parent element
+----------
+border-style & outline-style
+dotted - Defines a dotted border
+dashed - Defines a dashed border
+solid - Defines a solid border
+double - Defines a double border
+groove - Defines a 3D grooved border. The effect depends on the border-color value
+ridge - Defines a 3D ridged border. The effect depends on the border-color value
+inset - Defines a 3D inset border. The effect depends on the border-color value
+outset - Defines a 3D outset border. The effect depends on the border-color value
+none - Defines no border
+hidden - Defines a hidden border
+_______
+text-align:
+center
+left
+right
+justify
+________
+The direction and unicode-bidi properties can be used to change the text direction of an element
+ direction: rtl;
+  unicode-bidi: bidi-override;
+_________
+vertical-align property sets the vertical alignment of an element.
+image زى ال 
+vertical-align:
+baseline; صورة جنب الكلام
+text-top;الصورة فوق الكلمة شوية 
+text-bottom;الصورة تحت الكلمة شوية 
+sub; الصورة تحت شوية عن الكلام
+super; الصورة فوق شوية عن الكلام
+______________
+ text-decoration property is used to set or remove decorations from text.
+  text-decoration: 
+  none;
+  overline; خط فوق الكلمة
+  line-through; خط على الكلمة
+  underline; خط تحت الكلمة
+  _______
+ text-transform property is used to specify uppercase and lowercase letters in a text.
+  text-transform:
+   uppercase;
+   lowercase;
+   capitalize;
+   ___________
+   text-indent property is used to specify the indentation of the first line of a text
+   بتسيب مسافة فى اول الخط
+   p {
+  text-indent: 50px;
+   }
+   _________
+   letter-spacing property is used to specify the space between the characters in a text
+   المسافة بين الحروف
+    letter-spacing: -3px; هيقرب الحروف من بعض
+    letter-spacing: 3px; هيبعد الحروف عن بعض
+   _________
+    line-height property is used to specify the space between lines
+    line-height: 0.8;
+   _______
+   word-spacing property is used to specify the space between the words in a text.
+   المسافة بين كل كلمة
+     word-spacing: 10px; هيبعدهم عن بعض
+     word-spacing: -10px;  هيقربهم من بعض
+   _______
+    font-style property is mostly used to specify italic text.
+       font-style: 
+       italic;
+       normal;
+       oblique;    (oblique is very similar to italic, but less supported)
+   _______
+  font-weight:
+   normal;
+   bold;
+   ______
+   font-variant: small-caps;
+   بيخلى الخط صغير و كابتل
+   ________
+   a:link - a normal, unvisited link
+   a:visited - a link the user has visited
+   a:hover - a link when the user mouses over it
+   a:active - a link the moment it is clicked
+   _______
+   list-style-type property specifies the type of list item marker
+   list-style-type:
+   circle;  list item بيحط دايرة عند ال
+   square; list item بيحط مربع عند  كل  
+   upper-roman; I. II. III. كدة list بيرتب ال  
+   lower-alpha; بحروف list بيرتب ال 
+   ------------------------
+    list-style-image: url('sqpurple.gif'); list item بيحط صورة عند كل 
+    -------------------
+     list-style-position: outside;
+     The start of each line of a list item will be aligned vertically.This is default
+     ________
+      list-style-position: inside;
+      means that the bullet points will be inside the list item. As it is part of the list item,
+      it will be part of the text and push the text at the start
+      مثال
+      .  red
+      .  green
+      ________
+      list-style: list-style-type list-style-position list-style-image;
+      list-style: square inside url("sqpurple.gif")
+_________________________
+؟ css ازاى اعرف متغير فى ال 
+To create a variable with global scope, declare it inside the :root selector. 
+The :root selector matches the document's root element.
+To create a variable with local scope, declare it inside the selector that is going to use it.
+
+
+The syntax of the var() function is as follows:
+var(--name, value)
+name	 Required (must start with two dashes) and it is case sensitive!
+value  Optional (used if the variable is not found)
+
+h2 {color: var(--heading_color, black)}
+
+// global variable
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+  }
+.content{
+  // var ==> --blue هترجع قيمة المتغير(retrieve the value of the variable passed to it)
+  background-color: var(--blue) 
+}  
+
+// local variable
+.content{
+    --blue: #1e90ff;
+    background-color: var(--blue);  // المتغير متشاف هنا بس
+}
+.content2{
+    background-color: var(--blue); 
+}
+____________
+body {background: var(--bgColor)}
+div {--bgColor: limegreen}
+// موجودة داخل الديف يعنى متعرفة فى الاسكوب بتاع الديف p المتغير هيبقى متشاف هنا لان ال 
+p { background: var(--bgColor)} 
+
+<div> Div 1
+   <p>Paragraph 1</p> 
+</div>
+
+____________
+Advantages of using var() ?
+makes the code easier to read (more understandable)
+makes it much easier to change the color values
+____________
+CSS variables are widely supported in major browsers, though support may be lacking in older 
+versions of Chrome and Firefox. Support for CSS variables in IE and Edge are presently underway.
+The CSS.supports() static methods returns a Boolean value 
+indicating if the browser supports a given CSS feature, or not.
+
+var body = document.getElementsByTagName('body')[0]
+if (window.CSS && CSS.supports('color', 'var(--fake-var)')) {
+  body.style.background = 'green';
+} else {
+  body.style.background = 'red';
+}
+
+__________
+
+:root {--paragraph_size: 20px;}
+h2{font-size: calc(var(--paragraph_size) * 2.5)}
+
+the calc function is a basic CSS function that lets us do calculations. For example,
+Calc functions are generally used to apply relative properties in HTML.
+This is how I would make the heading to be 2.5 times larger than the paragraph’s font size.
+But the problem here is that even though I have my requirements set properly,
+I still have to look at my paragraph size. This leads to redundancy in the source code. 
+Variables in CSS can be used with the calc function just like any other property to minimize
+redundancy.
+______________________
+
+SASS Variables vs. CSS Variables ?
+
+SASS Variable :-
+1- Static allocation
+2- Media queries not supported
+3- Requires preprocessor
+4- An added layer of calculation and complexity
+
+CSS Variable :-
+1- Dynamic allocation
+2- Support for media queries
+3- Preprocessor not required
+4- Single-layer and direct variable management
+
+The SASS variables were commonly used before CSS variables.
+But the differences between them cannot be ignored. CSS variables are more useful as 
+compared to SASS variables but also differ in many other aspects. Let’s see them in the next
+section.
+*/
+
+div{
+    background-color: burlywood;
+    padding: 10px;
+    border: 1px solid red;
+    width: 300px;
+    word-wrap: break-word;/*اما مساحة الديف تخلص بينزل سطر حتى لو مفيش مسافة بين الكلام */ 
+    /*مبتخليش الكلام ينزل لتحت*/
+   /* white-space: normal; هينزل سطر فى حالة ان فى مساافة بين الكلام */
+}

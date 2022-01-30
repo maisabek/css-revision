@@ -1,0 +1,7 @@
+*{
+    box-sizing: content-box; /* الوضع الطبيعى ومش بيعمل اى حاجة*/
+  -webkit-box-sizing: border-box; /* مهما اعمل بادنج او بردر مش بيأثر على المساحة*/
+  -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}

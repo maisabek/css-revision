@@ -1,0 +1,19 @@
+/*  
+عشان اعمل فونت بايدى  
+*/
+/*
+انواع الفونت
+TTF
+EOT
+OTF
+WOFF
+WOFF2
+SVG
+*/
+div{
+    font-family: mmm;
+}
+@font-face{
+    font-family: mmm;
+    src:url('') /* احط مسار الفونت دة  */
+}
